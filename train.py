@@ -33,7 +33,7 @@ class Normalize_Model():
         with torch.no_grad():
             hypotheses = self.model.generate(**inputs, **kwargs)
         return self.tokenizer.decode(hypotheses[0], skip_special_tokens=True)
-    def train(self, pairs, test_pairs=None, aug=False):
+    def train(self, pairs: list[tuple[str, str]], test_pairs=None, aug=False):
         if aug:
             pairs = self.augmentation(pairs)
         if self.task:
@@ -75,7 +75,7 @@ class Normalize_Model():
     def save(self, output="new_model"):
         self.model.save_pretrained(output)
         self.tokenizer.save_pretrained(output)
-    def test(self, pairs, branches=5, aug=False):
+    def test(self, pairs: list[tuple[str, str]], branches=5, aug=False):
         random.shuffle(pairs)
         self.train_results_loss = [0]*self.epochs
         self.train_results_accuracy = [0]*self.epochs
@@ -92,6 +92,7 @@ class Normalize_Model():
         self.train_results_loss = [x/branches for x in self.train_results_loss]
         self.train_results_accuracy = [x/branches for x in self.train_results_accuracy]
         self.accuracy = self.train_results_accuracy[-1]
+        self.graph()
         return self.accuracy
     def graph(self):
         if self.train_results_accuracy:
@@ -116,7 +117,7 @@ class Normalize_Model():
             plt.show()
         else:
             print("model hasn't been trained")
-    def augmentation(self, training_data):
+    def augmentation(self, training_data: list[tuple[str, str]]):
         rand_elems = random.sample(training_data, int(len(training_data)/5))
         rand_chars = ['.',',',' ','1','2','3','4','5','6','7','8','9','.','.','.',',',',','-','-']
         for i in rand_elems:
