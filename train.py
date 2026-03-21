@@ -82,7 +82,15 @@ class Normalize_Model():
         for i in range(branches):
             test_data = pairs[i*(len(pairs)//branches):(i+1)*(len(pairs)//branches)]
             train_data = pairs[0:(i*len(pairs)//branches)]+pairs[(i+1)*(len(pairs)//branches):]
-            test_model = Normalize_Model(patience=-1)
+            test_model = Normalize_Model(patience=-1,
+                                         start_model=self.start_model,
+                                         batch_size=self.batch_size, 
+                                         epochs=self.epochs, 
+                                         lr=self.lr, 
+                                         weight_decay=self.weight_decay, 
+                                         min_delta=self.min_delta, 
+                                         task=self.task
+                                        )
             test_model.train(train_data, test_pairs=test_data, aug=aug)
             self.train_results_loss = [x+y for x,y in zip(self.train_results_loss,test_model.train_results_loss)]
             self.train_results_accuracy = [x+y for x,y in zip(self.train_results_accuracy,test_model.train_results_accuracy)]
