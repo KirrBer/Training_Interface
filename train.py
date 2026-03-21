@@ -28,6 +28,7 @@ class Normalize_Model():
         self.patience = patience
         self.min_delta = min_delta
         self.task = task
+        self.start_model = start_model
     def answer(self, x, **kwargs):
         inputs = self.tokenizer(x, return_tensors='pt').to(self.model.device)
         with torch.no_grad():
