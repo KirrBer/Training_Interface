@@ -4,6 +4,8 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 import logging
+import argparse
+import json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -162,6 +164,51 @@ class Normalize_Model():
             new_data_elem = [training_data[rand_elem][0].lower(),training_data[rand_elem][1]]
             training_data.append(new_data_elem)
         return training_data
+
+
+def load_data(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return [(item[0], item[1]) for item in data]
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Train or test the Normalize Model")
+    parser.add_argument('--mode', choices=['train', 'test'], required=True, help='Mode: train or test')
+    parser.add_argument('--data_file', required=True, help='Path to JSON file with training data')
+    parser.add_argument('--batch_size', type=int, default=16, help='Batch size')
+    parser.add_argument('--epochs', type=int, default=16, help='Number of epochs')
+    parser.add_argument('--lr', type=float, default=2e-4, help='Learning rate')
+    parser.add_argument('--weight_decay', type=float, default=0.01, help='Weight decay')
+    parser.add_argument('--patience', type=int, default=3, help='Patience for early stopping')
+    parser.add_argument('--min_delta', type=float, default=0.01, help='Min delta for early stopping')
+    parser.add_argument('--task', type=str, default='normalize skill', help='Task prefix')
+    parser.add_argument('--start_model', type=str, default='./start_model', help='Path to start model')
+    parser.add_argument('--output', type=str, default='new_model', help='Output path for saving model')
+    parser.add_argument('--aug', action='store_true', help='Use augmentation')
+    parser.add_argument('--branches', type=int, default=5, help='Number of branches for cross-validation')
+    
+    args = parser.parse_args()
+    
+    pairs = load_data(args.data_file)
+    
+    model = Normalize_Model(
+        batch_size=args.batch_size,
+        epochs=args.epochs,
+        lr=args.lr,
+        weight_decay=args.weight_decay,
+        patience=args.patience,
+        min_delta=args.min_delta,
+        task=args.task,
+        start_model=args.start_model
+    )
+    
+    if args.mode == 'train':
+        model.train(pairs, aug=args.aug)
+        model.save(args.output)
+    elif args.mode == 'test':
+        accuracy = model.test(pairs, branches=args.branches, aug=args.aug)
+        print(f"Final accuracy: {accuracy}")
 
 
 
