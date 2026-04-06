@@ -167,9 +167,15 @@ class Normalize_Model():
 
 
 def load_data(file_path):
+    pairs = []
     with open(file_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    return [(item[0], item[1]) for item in data]
+        for line in f:
+            line = line.strip()
+            if line:
+                parts = line.split(',', 1)  # Split only on first comma
+                if len(parts) == 2:
+                    pairs.append((parts[0].strip(), parts[1].strip()))
+    return pairs
 
 
 if __name__ == "__main__":
