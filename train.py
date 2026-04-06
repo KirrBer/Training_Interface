@@ -47,6 +47,7 @@ class Normalize_Model():
             if test_pairs:
                 test_pairs = [[self.task+": "+p[0], p[1]] for p in test_pairs]
         logging.info(f"Starting training with {len(pairs)} pairs for {self.epochs} epochs")
+        cur_patience = self.patience
         for epoch in range(self.epochs):
             random.shuffle(pairs)
             self.model.train()
@@ -70,16 +71,15 @@ class Normalize_Model():
             self.train_results_loss.append(np.mean(losses))
             logging.info(f"Epoch {epoch+1}/{self.epochs}: Loss = {self.train_results_loss[-1]:.4f}")
             if epoch>0 and self.train_results_loss[-1] - self.train_results_loss[-2] < self.min_delta:
-                self.patience -= 1
+                cur_patience -= 1
             if test_pairs:
                 self.model.eval()
                 self.train_results_accuracy.append(sum([test_pairs[i][1]==self.answer(test_pairs[i][0]) for i in range(len(test_pairs))])/len(test_pairs))
                 self.accuracy = self.train_results_accuracy[-1]
                 logging.info(f"Epoch {epoch+1}/{self.epochs}: Accuracy = {self.accuracy:.4f}")
-            if self.patience == 0:
+            if cur_patience == 0:
                 logging.info("Early stopping triggered")
                 break
-        self.patience = 3
         self.model.eval()
         logging.info("Training completed")
     def save(self, output="new_model"):
