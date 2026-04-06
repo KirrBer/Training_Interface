@@ -3,6 +3,9 @@ from transformers import T5ForConditionalGeneration, T5Tokenizer
 import random
 import numpy as np
 import matplotlib.pyplot as plt
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 class Normalize_Model():
@@ -41,6 +44,7 @@ class Normalize_Model():
             pairs = [[self.task+": "+p[0], p[1]] for p in pairs]
             if test_pairs:
                 test_pairs = [[self.task+": "+p[0], p[1]] for p in test_pairs]
+        logging.info(f"Starting training with {len(pairs)} pairs for {self.epochs} epochs")
         for epoch in range(self.epochs):
             random.shuffle(pairs)
             self.model.train()
@@ -62,21 +66,26 @@ class Normalize_Model():
                 self.optimizer.zero_grad()
                 losses.append(loss.item())
             self.train_results_loss.append(np.mean(losses))
+            logging.info(f"Epoch {epoch+1}/{self.epochs}: Loss = {self.train_results_loss[-1]:.4f}")
             if epoch>0 and self.train_results_loss[-1] - self.train_results_loss[-2] < self.min_delta:
                 self.patience -= 1
             if test_pairs:
                 self.model.eval()
                 self.train_results_accuracy.append(sum([test_pairs[i][1]==self.answer(test_pairs[i][0]) for i in range(len(test_pairs))])/len(test_pairs))
                 self.accuracy = self.train_results_accuracy[-1]
+                logging.info(f"Epoch {epoch+1}/{self.epochs}: Accuracy = {self.accuracy:.4f}")
             if self.patience == 0:
-                print("Early stopping triggered")
+                logging.info("Early stopping triggered")
                 break
         self.patience = 3
         self.model.eval()
+        logging.info("Training completed")
     def save(self, output="new_model"):
+        logging.info(f"Saving model to {output}")
         self.model.save_pretrained(output)
         self.tokenizer.save_pretrained(output)
     def test(self, pairs: list[tuple[str, str]], branches=5, aug=False):
+        logging.info(f"Starting cross-validation with {branches} branches on {len(pairs)} pairs")
         random.shuffle(pairs)
         self.train_results_loss = [0]*self.epochs
         self.train_results_accuracy = [0]*self.epochs
@@ -95,9 +104,9 @@ class Normalize_Model():
             test_model.train(train_data, test_pairs=test_data, aug=aug)
             self.train_results_loss = [x+y for x,y in zip(self.train_results_loss,test_model.train_results_loss)]
             self.train_results_accuracy = [x+y for x,y in zip(self.train_results_accuracy,test_model.train_results_accuracy)]
-            print(self.train_results_accuracy)
-            print(self.train_results_loss)
+            logging.info(f"Branch {i+1}/{branches}: Accumulated Accuracy = {[round(x, 4) for x in self.train_results_accuracy]}, Accumulated Loss = {[round(x, 4) for x in self.train_results_loss]}")
             del test_model
+        logging.info(f"Cross-validation completed. Average Accuracy per epoch: {[round(x/branches, 4) for x in self.train_results_accuracy]}, Average Loss per epoch: {[round(x/branches, 4) for x in self.train_results_loss]}")
         self.train_results_loss = [x/branches for x in self.train_results_loss]
         self.train_results_accuracy = [x/branches for x in self.train_results_accuracy]
         self.accuracy = self.train_results_accuracy[-1]
