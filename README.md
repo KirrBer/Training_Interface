@@ -25,13 +25,14 @@ from train import Normalize_Model
 
 model = Normalize_Model(
     batch_size=16,
-    epochs=16,
+    epochs=8,
     lr=2e-4,
     weight_decay=0.01,
     patience=3,
-    min_delta=0.01,
+    min_delta=0.05,
     task="normalize skill",
-    start_model="./start_model"
+    start_model="./start_model",
+    scheduler=False
 )
 ```
 
@@ -50,7 +51,7 @@ model.train(pairs, test_pairs=test_pairs, aug=True)
 ### Тестирование модели
 
 ```python
-accuracy = model.test(pairs, branches=5, aug=True)
+accuracy = model.test(pairs, folds=5, aug=True)
 print(f"Accuracy: {accuracy}")
 ```
 
@@ -81,44 +82,53 @@ model.graph()
 
 Данные должны быть в TXT файле, где каждая строка имеет формат: `input,output`
 
+Пример файла dataset.txt:
+```
+питон,Python
+ml,Machine Learning
+```
+
 ### Примеры команд
 
 Обучение модели:
 ```bash
-python train.py --mode train --data_file data.json --epochs 10 --batch_size 8 --output my_model
+python train.py --mode train --data_file dataset.txt --test_file test.txt --epochs 10 --batch_size 8 --output my_model --aug
 ```
 
 Тестирование модели:
 ```bash
-python train.py --mode test --data_file data.json --branches 3 --aug
+python train.py --mode test --data_file dataset.txt --output new_model --epochs 8  --folds 5 --start_model ../start_model --aug --scheduler
 ```
 
 ### Доступные флаги
 
 - `--mode`: Режим работы (`train` или `test`) - обязательный
-- `--data_file`: Путь к JSON файлу с данными - обязательный
+- `--data_file`: Путь к TXT файлу с данными - обязательный
+- `--test_file`: Путь к TXT файлу с тестовыми данными (опционально для train)
 - `--batch_size`: Размер батча (по умолчанию 16)
-- `--epochs`: Количество эпох (по умолчанию 16)
+- `--epochs`: Количество эпох (по умолчанию 8)
 - `--lr`: Скорость обучения (по умолчанию 2e-4)
 - `--weight_decay`: Регуляризация (по умолчанию 0.01)
 - `--patience`: Терпение для ранней остановки (по умолчанию 3)
-- `--min_delta`: Минимальное изменение для ранней остановки (по умолчанию 0.01)
+- `--min_delta`: Минимальное изменение для ранней остановки (по умолчанию 0.05)
 - `--task`: Префикс задачи (по умолчанию "normalize skill")
 - `--start_model`: Путь к начальной модели (по умолчанию "./start_model")
 - `--output`: Путь для сохранения модели (по умолчанию "new_model")
 - `--aug`: Включить аугментацию данных
-- `--branches`: Количество ветвей для кросс-валидации (по умолчанию 5)
+- `--folds`: Количество фолдов для кросс-валидации (по умолчанию 5)
+- `--scheduler`: Включить планировщик скорости обучения
 
 ## Параметры
 
 - `batch_size`: Размер батча для обучения (по умолчанию 16)
-- `epochs`: Количество эпох обучения (по умолчанию 16)
+- `epochs`: Количество эпох обучения (по умолчанию 8)
 - `lr`: Скорость обучения (по умолчанию 2e-4)
 - `weight_decay`: Регуляризация (по умолчанию 0.01)
 - `patience`: Терпение для ранней остановки (по умолчанию 3)
-- `min_delta`: Минимальное изменение для ранней остановки (по умолчанию 0.01)
+- `min_delta`: Минимальное изменение для ранней остановки (по умолчанию 0.05)
 - `task`: Префикс задачи (по умолчанию "normalize skill")
 - `start_model`: Путь к начальной модели (по умолчанию "./start_model")
+- `scheduler`: Использовать планировщик скорости обучения (по умолчанию False)
 
 ## Аугментация данных
 

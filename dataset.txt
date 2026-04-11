@@ -1,0 +1,680 @@
+фронтенд,frontend
+бэкенд,backend
+фулстек,fullstack
+фуллстек,fullstack
+пхп,PHP
+питон,Python
+пайтон,Python
+питончик,Python
+джава,Java
+джаваскрипт,JavaScript
+жабаскрипт,JavaScript
+жаба,Java
+сишарп,C#
+си шарп,C#
+плюсы,C++
+си плюс плюс,C++
+си++,C++
+руби,Ruby
+го,Go
+голанг,Go
+раст,Rust
+пиэйчпи,PHP
+джанго,Django
+ларавель,Laravel
+рейлс,Ruby on Rails
+симфони,Symfony
+спринг,Spring
+спринг бут,Spring Boot
+хибернейт,Hibernate
+Javascript,JavaScript
+Java script,JavaScript
+type script,TypeScript
+type-script,TypeScript
+typescript,TypeScript
+javascrip,JavaScript
+javascrit,JavaScript
+javasript,JavaScript
+js,JavaScript
+ts,TypeScript
+vuejs,Vue.js
+vue-js,Vue.js
+reactjs,React
+react-js,React
+nodejs,Node.js
+node-js,Node.js
+git,git
+github,GitHub
+git hub,GitHub
+JS,JavaScript
+TS,TypeScript
+API,API
+React,React
+Vue,Vue
+Angular,Angular
+Node,Node.js
+NPM,npm
+Git,Git
+GitHub,GitHub
+HTML,HTML
+CSS,CSS
+Sass,Sass
+Less,Less
+Webpack,Webpack
+Babel,Babel
+ES5,ES5
+ES6,ES6
+ES2015,ES2015
+ES2020,ES2020
+TSX,TSX
+JSX,JSX
+JSON,JSON
+AJAX,AJAX
+SPA,SPA
+SSR,SSR
+CSR,CSR
+JWT,JWT
+OAuth,OAuth
+REST,REST
+GraphQL,GraphQL
+SQL,SQL
+NoSQL,NoSQL
+MongoDB,MongoDB
+PostgreSQL,PostgreSQL
+MySQL,MySQL
+Redis,Redis
+Docker,Docker
+K8s,Kubernetes
+Kubernetes,Kubernetes
+английский,Английский язык
+CI,CI
+CD,CD
+DevOps,DevOps
+Frontend,frontend
+Backend,backend
+Fullstack,fullstack
+UI,UI
+UX,UX
+DOM,DOM
+V8,V8
+WebAssembly,WebAssembly
+WASM,WebAssembly
+CSS3,CSS
+HTML5,HTML
+css3,CSS
+csss,CSS
+json,JSON
+react,React
+реакт,React
+restapi,REST
+rest,REST
+java-script,JavaScript
+JAVA,Java
+Rest Api,REST
+питоне,Python
+python3,Python
+delphi7,Delphi
+xml,XML
+дельфи,Delphi
+ssr,SSR
+ajax,AJAX
+react native,React Native
+React Native,React Native
+ml,Machine Learning
+ML,Machine Learning
+DS,Data Science
+pytorch,PyTorch
+mysql,MySQL
+postgres,PostgreSQL
+Next,Next.js
+Nuxt,Nuxt.js
+Gatsby,Gatsby
+Astro,Astro
+Svelte,Svelte
+Qwik,Qwik
+Vite,Vite
+Vitest,Vitest
+Jest,Jest
+Mocha,Mocha
+Chai,Chai
+Cypress,Cypress
+Playwright,Playwright
+Puppeteer,Puppeteer
+Tailwind,Tailwind
+Bootstrap,Bootstrap
+Material UI,Material-UI
+Chakra,Chakra UI
+Figma,Figma
+Storybook,Storybook
+Nx,Nx
+Turborepo,Turborepo
+yarn,Yarn
+bun,Bun
+Deno,Deno
+Bun,Bun
+swift,Swift
+Kotlin,Kotlin
+Dart,Dart
+Flutter,Flutter
+React Native,React Native
+Ionic,Ionic
+Capacitor,Capacitor
+Electron,Electron
+Tauri,Tauri
+AWS,AWS
+Azure,Azure
+GCP,Google Cloud Platform
+Lambda,AWS Lambda
+S3,Amazon S3
+EC2,Amazon EC2
+CloudFront,CloudFront
+Terraform,Terraform
+Ansible,Ansible
+Jenkins,Jenkins
+GitLab CI,GitLab CI
+GitHub Actions,GitHub Actions
+TeamCity,TeamCity
+PG,PostgreSQL
+PSQL,PostgreSQL
+Mongo,MongoDB
+Redis,Redis
+Memcached,Memcached
+Elasticsearch,Elasticsearch
+ClickHouse,ClickHouse
+SQLite,SQLite
+английский язык,Английский язык
+DDD,Domain-Driven Design
+TDD,Test-Driven Development
+BDD,Behavior-Driven Development
+пайтон,Python
+джаву,Java
+питоном,Python
+реакте,React
+китайский,Китайский язык
+джаваскрипт,JavaScript
+жаваскрипт,JavaScript
+сишарп,C#
+си шарп,C#
+плюсы,C++
+раст,Rust
+пиэйчпи,PHP
+английскому,Английский язык
+джанго,Django
+ларавель,Laravel
+рейлс,Ruby on Rails
+симфони,Symfony
+спринг,Spring
+спринг бут,Spring Boot
+девелопмент,development
+немецкий,Немецкий язык
+деплой,deploy
+VSCode,Visual Studio Code
+VSC,Visual Studio Code
+апи,API
+бд,database
+фронт,frontend
+бэк,backend
+фуллстек,fullstack
+dl,Deep Learning
+DL,Deep Learning
+машинное обучение,Machine Learning
+глубокое обучение,Deep Learning
+JS,JavaScript
+TS,TypeScript
+API,API
+UI,UI
+UX,UX
+DOM,DOM
+CSS,CSS
+HTML,HTML
+JSON,JSON
+AJAX,AJAX
+Git,Git
+GitHub,GitHub
+SQL,SQL
+NoSQL,NoSQL
+JWT,JWT
+OAuth,OAuth
+REST,REST
+GraphQL,GraphQL
+Docker,Docker
+K8s,Kubernetes
+CI,CI
+CD,CD
+DevOps,DevOps
+Javascript,JavaScript
+Java script,JavaScript
+type script,TypeScript
+typescript,TypeScript
+javascrip,JavaScript
+javascrit,JavaScript
+javasript,JavaScript
+js,JavaScript
+ts,TypeScript
+github,GitHub
+nodejs,Node.js
+node-js,Node.js
+vuejs,Vue.js
+vue-js,Vue.js
+reactjs,React
+react-js,React
+пхп,PHP
+питоне,Python
+пайтон,Python
+джава,Java
+джаваскрипт,JavaScript
+жабаскрипт,JavaScript
+сишарп,C#
+си шарп,C#
+плюсы,C++
+си плюс плюс,C++
+голанг,Go
+JS,JavaScript
+TS,TypeScript
+K8s,Kubernetes
+Node,Node.js
+Next,Next.js
+Nuxt,Nuxt.js
+React Native,React Native
+jQuery,jQuery
+Javascript,JavaScript
+TypeScript,TypeScript
+Java Script,JavaScript
+Type Script,TypeScript
+javascrip,JavaScript
+javascrit,JavaScript
+javasript,JavaScript
+js,JavaScript
+ts,TypeScript
+nodejs,Node.js
+node-js,Node.js
+vuejs,Vue.js
+vue,Vue.js
+vue-js,Vue.js
+reactjs,React
+react-js,React
+nextjs,Next.js
+next-js,Next.js
+nuxtjs,Nuxt.js
+nuxt-js,Nuxt.js
+sveltejs,Svelte
+svelte-js,Svelte
+solidjs,Solid
+solid-js,Solid
+mongodb,MongoDB
+mongo-db,MongoDB
+postgresql,PostgreSQL
+postgre-sql,PostgreSQL
+mysql,MySQL
+my-sql,MySQL
+sqlite,SQLite
+sql-lite,SQLite
+expressjs,Express
+express-js,Express
+nestjs,NestJS
+nest-js,NestJS
+graphql,GraphQL
+graph-ql,GraphQL
+gcp,Google Cloud Platform
+aws-cli,AWS CLI
+azure-cli,Azure CLI
+terraform,Terraform
+docker-compose,Docker Compose
+докер,Docker
+docker compose,Docker Compose
+1С,1С:Предприятие
+1Сник,1С-программист
+1С-разработчик,1С-разработчик
+Бухгалтерия 1С,1С:Бухгалтерия
+ЗУП,1С:Зарплата и управление персоналом
+УПП,1С:Управление производственным предприятием
+УТ,1С:Управление торговлей
+Документооборот 1С,1С:Документооборот
+КА,1С:Комплексная автоматизация
+Конфигуратор 1С,Конфигуратор 1С
+Запросы 1С,язык запросов 1С
+pl,PL/SQL
+СКД,система компоновки данных 1С
+Регистры 1С,регистры 1С
+Астра,ОС Astra Linux
+РЕД ОС,РЕД ОС
+ERP,ERP-система
+КИС,корпоративная информационная система
+СЭД,система электронного документооборота
+CRM,CRM-система
+Питона,Python
+Питоном,Python
+Питоне,Python
+Джавы,Java
+Джавой,Java
+Джаве,Java
+Джаваскрипта,JavaScript
+Джаваскриптом,JavaScript
+Джаваскрипте,JavaScript
+Сишарпа,C#
+Сишарпом,C#
+Сишарпе,C#
+Плюсов,C++
+Плюсами,C++
+Плюсах,C++
+Гофера,Go
+Гофером,Go
+Раста,Rust
+Растом,Rust
+Расте,Rust
+Пхпшника,PHP
+Пхпшником,PHP
+Джанги,Django
+Джангой,Django
+Ларавеля,Laravel
+Ларавелем,Laravel
+Фронтенда,frontend
+Фронтендом,frontend
+Бэкенда,backend
+Бэкендом,backend
+Питон,Python
+Пайтон,Python
+Джава,Java
+Джаваскрипт,JavaScript
+Жабаскрипт,JavaScript
+Сишарп,C#
+Си шарп,C#
+Плюсы,C++
+Си плюс плюс,C++
+Руби,Ruby
+Го,Go
+Голанг,Go
+Раст,Rust
+Пхп,PHP
+Пиэйчпи,PHP
+Джанго,Django
+Ларавель,Laravel
+Рейлс,Ruby on Rails
+Симфони,Symfony
+Спринг,Spring
+Фронтенд,frontend
+Бэкенд,backend
+Фулстек,fullstack
+Девопс,DevOps
+Айпи,IP
+Днс,DNS
+K8s,Kubernetes
+Node,Node.js
+Next,Next.js
+Nuxt,Nuxt.js
+Javascript,JavaScript
+TypeScript,TypeScript
+Java Script,JavaScript
+Type Script,TypeScript
+javascrip,JavaScript
+js,JavaScript
+ts,TypeScript
+nodejs,Node.js
+vuejs,Vue.js
+reactjs,React
+nextjs,Next.js
+nuxtjs,Nuxt.js
+sveltejs,Svelte
+solidjs,Solid
+mongodb,MongoDB
+postgresql,PostgreSQL
+mysql,MySQL
+sqlite,SQLite
+expressjs,Express
+nestjs,NestJS
+graphql,GraphQL
+gcp,Google Cloud Platform
+Py,Python
+Rb,Ruby
+Hsk,Haskell
+Clj,Clojure
+cpp,C++
+csharp,C#
+fsharp,F#
+vb,Visual Basic
+swft,Swift
+kt,Kotlin
+rs,Rust
+go,Go
+drt,Dart
+php,PHP
+plsql,PL/SQL
+tsql,T-SQL
+md,Markdown
+yml,YAML
+toml,TOML
+xml,XML
+csv,CSV
+верстки,верстка
+вёрсткой,верстка
+фотошоп,Photoshop
+photoshop,Photoshop
+фронт,frontend
+фронтендер,frontend
+фронтэнд,frontend
+фронт енд,frontend
+front,frontend
+front-end,frontend
+frontend developer,frontend
+бек,backend
+бекенд,backend
+бекэнд,backend
+бэкендер,backend
+back,backend
+back-end,backend
+backend developer,backend
+full stack,fullstack
+full-stack,fullstack
+фул стек,fullstack
+фул-стек,fullstack
+fullstack developer,fullstack
+lamp,LAMP
+mern,MERN
+mean,MEAN
+mevn,MEVN
+php8,PHP
+php7,PHP
+пыха,PHP
+пыхпых,PHP
+python2,Python
+py,Python
+пай,Python
+жава,Java
+java8,Java
+java11,Java
+java17,Java
+kotlin,Kotlin
+котлин,Kotlin
+scala,Scala
+скала,Scala
+groovy,Groovy
+груви,Groovy
+spring mvc,Spring
+springboot,Spring Boot
+hibernate,Hibernate
+jpa,JPA
+maven,Maven
+gradle,Gradle
+ant,Ant
+.net,.NET
+dotnet,.NET
+asp.net,ASP.NET
+aspnet,ASP.NET
+entity framework,Entity Framework
+linq,LINQ
+wpf,WPF
+winforms,WinForms
+unity,Unity
+unreal,Unreal Engine
+c,C
+си,C
+objective-c,Objective-C
+objective c,Objective-C
+swift,Swift
+свифт,Swift
+ios,iOS
+android,Android
+андроид,Android
+flutter,Flutter
+dart,Dart
+react native cli,React Native
+expo,Expo
+nextjs,Next.js
+next-js,Next.js
+nuxt,Nuxt.js
+nuxtjs,Nuxt.js
+gatsby,Gatsby
+svelte,Svelte
+sveltekit,SvelteKit
+ember,Ember.js
+backbone,Backbone.js
+jquery,jQuery
+jqueryui,jQuery UI
+bootstrap,Bootstrap
+tailwind,Tailwind CSS
+material ui,Material UI
+mui,Material UI
+ant design,Ant Design
+chakra ui,Chakra UI
+storybook,Storybook
+vite,Vite
+parcel,Parcel
+rollup,Rollup
+eslint,ESLint
+prettier,Prettier
+husky,Husky
+lint,Linter
+npmjs,npm
+yarn,Yarn
+pnpm,pnpm
+deno,Deno
+bun,Bun
+express,Express
+expressjs,Express
+koa,Koa
+nestjs,NestJS
+fastify,Fastify
+hapi,Hapi
+socketio,Socket.IO
+websocket,WebSocket
+graphql api,GraphQL
+apollo,Apollo
+prisma,Prisma
+typeorm,TypeORM
+sequelize,Sequelize
+mongoose,Mongoose
+firebase,Firebase
+supabase,Supabase
+appwrite,Appwrite
+strapi,Strapi
+sanity,Sanity
+contentful,Contentful
+wordpress,WordPress
+wp,WordPress
+bitrix,Bitrix
+1c-bitrix,Bitrix
+drupal,Drupal
+joomla,Joomla
+magento,Magento
+shopify,Shopify
+woocommerce,WooCommerce
+tilda,Tilda
+figma,Figma
+adobe xd,Adobe XD
+photoshop,Photoshop
+illustrator,Illustrator
+blender,Blender
+threejs,Three.js
+three-js,Three.js
+webgl,WebGL
+canvas,Canvas API
+pwa,PWA
+service worker,Service Worker
+webworker,Web Worker
+indexeddb,IndexedDB
+localstorage,LocalStorage
+sessionstorage,SessionStorage
+cors,CORS
+http,Http
+https,Https
+tcp,TCP
+udp,UDP
+nginx,Nginx
+apache,Apache
+linux,Linux
+ubuntu,Ubuntu
+debian,Debian
+centos,CentOS
+bash,Bash
+shell,Shell
+zsh,Zsh
+powershell,PowerShell
+ansible,Ansible
+terraform,Terraform
+jenkins,Jenkins
+gitlab,GitLab
+gitlab ci,GitLab CI
+github actions,GitHub Actions
+circleci,CircleCI
+travis,Travis CI
+prometheus,Prometheus
+grafana,Grafana
+elk,ELK
+logstash,Logstash
+kibana,Kibana
+rabbitmq,RabbitMQ
+kafka,Apache Kafka
+zookeeper,ZooKeeper
+microservices,Microservices
+монолит,Monolith
+serverless,Serverless
+lambda,AWS Lambda
+aws,AWS
+amazon web services,AWS
+azure,Azure
+gcp,Google Cloud
+digitalocean,DigitalOcean
+heroku,Heroku
+vercel,Vercel
+netlify,Netlify
+ci/cd,CI/CD
+continuous integration,CI
+continuous delivery,CD
+scrum,Scrum
+agile,Agile
+kanban,Kanban
+ооп,ООП
+mvc,MVC
+mvvm,MVVM
+clean architecture,Clean Architecture
+solid,SOLID
+dry,DRY
+kiss,KISS
+yagni,YAGNI
+tdd,TDD
+bdd,BDD
+unit test,Unit Testing
+e2e,E2E
+cypress,Cypress
+playwright,Playwright
+selenium,Selenium
+postman,Postman
+swagger,Swagger
+openapi,OpenAPI
+jwt token,JWT
+oauth2,OAuth
+bcrypt,bcrypt
+argon2,Argon2
+ssl,SSL
+tls,TLS
+хтмл,HTML
+цсс,CSS
+жава скрипт,JavaScript
+тайпскрипт,TypeScript
+нод,Node.js
+ноджс,Node.js
+экспресс,Express
+монго,MongoDB
+постгрес,PostgreSQL
+мускул,MySQL
+редис,Redis
