@@ -677,4 +677,303 @@ tls,TLS
 монго,MongoDB
 постгрес,PostgreSQL
 мускул,MySQL
-редис,Redis
+редис,Redisfront end,frontend
+фронт-енд,frontend
+фронтенд?,frontend
+fronend,frontend
+frrontend,frontend
+back end,backend
+бэкэнд,backend
+бэк енд,backend
+бэк-енд,backend
+backend?,backend
+backand,backend
+фулл-стек,fullstack
+fullstack?,fullstack
+full stacker,fullstack
+javascript,JavaScript
+java script,JavaScript
+jscript,JavaScript
+javasacript,JavaScript
+тс,TypeScript
+типскрипт,TypeScript
+type script?,TypeScript
+type script js,TypeScript
+react js,React
+react.js,React
+реакт джс,React
+реакт.js,React
+reactjs?,React
+вью,Vue.js
+vue js,Vue.js
+вьюджс,Vue.js
+view.js,Vue.js
+vue.js?,Vue.js
+vju.js,Vue.js
+нода,Node.js
+node js,Node.js
+nodejs?,Node.js
+node.js,Node.js
+нэйд джэ эс,Node.js
+python,Python
+pyhton,Python
+питон3,Python
+python 3,Python
+python3?,Python
+java,Java
+javaee,Java
+java se,Java
+java ee,Java
+явa,Java
+джaвa,Java
+java 8,Java
+c plus plus,C++
+c++,C++
+си плюс-плюс,C++
+с++,C++
+cplusplus,C++
+c plusplus,C++
+c sharp,C#
+c#,C#
+c-sharp,C#
+си- шарп,C#
+golang,Go
+go lang,Go
+go-lang,Go
+golan,Go
+go 1.20,Go
+go lang?,Go
+rustlang,Rust
+rust,Rust
+руст,Rust
+rusta,Rust
+раст?,Rust
+ruby,Ruby
+ruby on rails,Ruby
+руби на рейлс,Ruby
+rubii,Ruby
+рубхи,Ruby
+django,Django
+джангo,Django
+джанды,Django
+djnago,Django
+djando,Django
+фласк,Flask
+flask,Flask
+flaks,Flask
+flkask,Flask
+flask?,Flask
+flasck,Flask
+фастапи,FastAPI
+fastapi,FastAPI
+fast api,FastAPI
+fast-api,FastAPI
+fast api?,FastAPI
+fastapi?,FastAPI
+spring boot,Spring Boot
+spring-boot,Spring Boot
+спрингбут,Spring Boot
+spring boot?,Spring Boot
+laravel,Laravel
+laravel?,Laravel
+ларавел,Laravel
+laravl,Laravel
+symfony,Symfony
+симфонй,Symfony
+симфония,Symfony
+symfony?,Symfony
+my sql,MySQL
+mysql5,MySQL
+майскл,MySQL
+mariadb,MySQL
+mysql?,MySQL
+postgres sql,PostgreSQL
+postgres-sql,PostgreSQL
+постгрескюэль,PostgreSQL
+postgresql?,PostgreSQL
+mongo db,MongoDB
+mongo,MongoDB
+монгодб,MongoDB
+мунгдб,MongoDB
+mongo db?,MongoDB
+redis,Redis
+rediss,Redis
+redisdb,Redis
+redis db,Redis
+redis?,Redis
+docker,Docker
+docker-compose,Docker
+докер компоуз,Docker
+docker compose,Docker
+докер-,Docker
+docker?,Docker
+докер компоуз,Docker Compose
+docker-compose?,Docker Compose
+docker compose?,Docker Compose
+kubernetes,Kubernetes
+k8s,Kubernetes
+кубернетес,Kubernetes
+кубер,Kubernetes
+кубернэтз,Kubernetes
+kube,Kubernetes
+kubernetes?,Kubernetes
+git,Git
+гит,Git
+gitlab,Git
+git hub,Git
+git-hub,Git
+гитхаб,Git
+git?,Git
+гитхаб,GitHub
+git-hub,GitHub
+гит хаб,GitHub
+github?,GitHub
+html,HTML
+html5,HTML
+htmll,HTML
+htlm,HTML
+эйч ти эм эл,HTML
+html ?,HTML
+css,CSS
+cascading style sheets,CSS
+c s s,CSS
+css ?,CSS
+sql,SQL
+sequel,SQL
+sq l,SQL
+эс ку эль,SQL
+sql server,SQL
+sql?,SQL
+api,API
+api-,API
+api.,API
+эй пи ай,API
+rest api,API
+api ?,API
+rest api,REST
+rest-api,REST
+рест,REST
+rest ?,REST
+restful,RESTful
+рестфул,RESTful
+rest full,RESTful
+restfull,RESTful
+restful?,RESTful
+graph ql,GraphQL
+графкьюэл,GraphQL
+graphql?,GraphQL
+линукс,Linux
+линус,Linux
+linux os,Linux
+linux?,Linux
+linx,Linux
+windows,Windows
+виндовс,Windows
+win,Windows
+windos,Windows
+windows10,Windows
+windows?,Windows
+macos,macOS
+mac os,macOS
+макос,macOS
+мак оэс,macOS
+macos?,macOS
+андройд,Android
+andro id,Android
+android?,Android
+айос,iOS
+i os,iOS
+iOS?,iOS
+pHP,PHP
+pHp,PHP
+ПХП,PHP
+php?,PHP
+sql server,SQL Server
+sql-server,SQL Server
+sqlserver,SQL Server
+эс кью эль сервер,SQL Server
+sql server?,SQL Server
+oracle,Oracle
+оракл,Oracle
+оракле,Oracle
+oracl,Oracle
+oracle?,Oracle
+sql lite,SQLite
+sq lite,SQLite
+эс ку эл лайт,SQLite
+sqlite?,SQLite
+аwс,AWS
+эм ви эс,AWS
+aws?,AWS
+азур,Azure
+азюр,Azure
+azure cloud,Azure
+azure?,Azure
+gcp,GCP
+google cloud,GCP
+гугл клауд,GCP
+g c p,GCP
+gcp?,GCP
+devops,DevOps
+dev ops,DevOps
+девопс,DevOps
+devo ps,DevOps
+devops?,DevOps
+ci cd,CI/CD
+cicd,CI/CD
+си/си ди,CI/CD
+ci-cd,CI/CD
+ci cd?,CI/CD
+ui,UI
+юай,UI
+user interface,UI
+user-interface,UI
+ui?,UI
+ux,UX
+юикс,UX
+user experience,UX
+user-experience,UX
+ux?,UX
+ide,IDE
+айдии,IDE
+интегрированная среда разработки,IDE
+ide?,IDE
+vs code,VS Code
+vscode,VS Code
+visual studio code,VS Code
+vs-code,VS Code
+вс код,VS Code
+vs code?,VS Code
+pycharm,PyCharm
+пичарм,PyCharm
+пайтчарм,PyCharm
+py charm,PyCharm
+pycharm?,PyCharm
+дженкинс,Jenkins
+jenkins?,Jenkins
+терраформ,Terraform
+terraform?,Terraform
+ktor,Ktor
+ктор,Ktor
+ktor?,Ktor
+селениум,Selenium
+selenium?,Selenium
+постман,Postman
+post man,Postman
+пост ман,Postman
+postman?,Postman
+jwt,JWT
+жвт,JWT
+json web token,JWT
+jwt?,JWT
+oauth,OAuth
+оаут,OAuth
+o auth,OAuth
+oauth?,OAuth
+джсон,JSON
+j son,JSON
+json?,JSON
+nosql,NoSQL
+no sql,NoSQL
+nosql?,NoSQL
+no-sql,NoSQL

@@ -60,7 +60,7 @@ class Normalize_Model():
 
             if self.scheduler:
                 x = (epoch+1) / self.epochs
-                cur_lr = round((1/(1+np.exp(7*(0.9*x**2-0.5))))*self.lr, 6)
+                cur_lr = round((1/(1+np.exp(10*(x**2-0.4)))+0.01)*self.lr, 6)
                 for param_group in self.optimizer.param_groups:
                     param_group['lr'] = cur_lr
             
