@@ -17,7 +17,7 @@ class Normalize_Model():
                  lr=2e-4, 
                  weight_decay=0.01, 
                  patience=3, 
-                 min_delta=0.05, 
+                 min_delta=0.01, 
                  task="normalize skill", 
                  start_model="./start_model",
                  scheduler=False):
@@ -25,7 +25,7 @@ class Normalize_Model():
         self.epochs = epochs
         self.lr = lr
         self.weight_decay = weight_decay
-        self.model = T5ForConditionalGeneration.from_pretrained(start_model)
+        self.model = T5ForConditionalGeneration.from_pretrained(start_model, tie_word_embeddings=True)
         self.tokenizer = T5Tokenizer.from_pretrained(start_model)
         self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=lr, weight_decay=weight_decay)
         self.train_results_loss = []
@@ -97,8 +97,8 @@ class Normalize_Model():
 
                 for i in range(0, len(test_pairs), self.batch_size):
                     batch = test_pairs[i:i+self.batch_size]
-                    x = self.tokenizer([p[0] for p in batch], return_tensors='pt', padding=True).to(self.device)
-                    y = self.tokenizer([p[1] for p in batch], return_tensors='pt', padding=True).to(self.device)
+                    x = self.tokenizer([p[0] for p in batch], return_tensors='pt', padding=True).to(self.model.device)
+                    y = self.tokenizer([p[1] for p in batch], return_tensors='pt', padding=True).to(self.model.device)
                     y.input_ids[y.input_ids == 0] = -100
                     
                     with torch.no_grad():
@@ -262,7 +262,7 @@ if __name__ == "__main__":
     parser.add_argument('--lr', type=float, default=2e-4, help='Learning rate')
     parser.add_argument('--weight_decay', type=float, default=0.01, help='Weight decay')
     parser.add_argument('--patience', type=int, default=3, help='Patience for early stopping')
-    parser.add_argument('--min_delta', type=float, default=0.05, help='Min delta for early stopping')
+    parser.add_argument('--min_delta', type=float, default=0.01, help='Min delta for early stopping')
     parser.add_argument('--task', type=str, default='normalize skill', help='Task prefix')
     parser.add_argument('--start_model', type=str, default='./start_model', help='Path to start model')
     parser.add_argument('--output', type=str, default='new_model', help='Output path for saving model')
