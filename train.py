@@ -86,7 +86,7 @@ class Normalize_Model():
                 losses.append(loss.item())
 
             self.train_results_loss.append(np.mean(losses))
-            if not test_pairs and epoch > 0 and self.train_results_loss[-1] - self.train_results_loss[-2] < self.min_delta:
+            if not test_pairs and epoch > 0 and self.train_results_loss[-2] - self.train_results_loss[-1] < self.min_delta:
                     cur_patience -= 1
             logging.info(f"Epoch {epoch+1}/{self.epochs}: Loss = {self.train_results_loss[-1]:.4f}")
             if test_pairs:
@@ -115,11 +115,9 @@ class Normalize_Model():
                 if self.train_results_validate_loss[-1] < min(self.train_results_validate_loss):
                     self.best_model_state = copy.deepcopy(self.model.state_dict())
 
-                if epoch>0 and self.train_results_validate_loss[-1] - self.train_results_validate_loss[-2] < self.min_delta:
+                if epoch>0 and self.train_results_validate_loss[-2] - self.train_results_validate_loss[-1] < self.min_delta:
                     cur_patience -= 1
-                    if cur_patience == 0:
-                        logging.info("Early stopping triggered")
-                        break
+ 
 
                 logging.info(f"Epoch {epoch+1}/{self.epochs}: Accuracy = {self.accuracy:.4f}")
                 logging.info(f"Epoch {epoch+1}/{self.epochs}: Validate Loss = {self.train_results_validate_loss[-1]:.4f}")
